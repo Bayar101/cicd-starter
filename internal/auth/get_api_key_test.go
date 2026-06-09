@@ -24,7 +24,7 @@ func TestGetApiKey(t *testing.T) {
 	})
 	t.Run("returns api key when auth header is present and in the correct format", func(t *testing.T) {
 		headers := make(http.Header)
-		headers.Add("Authorization", "ApiKey 123456789")
+		headers.Add("Authorization", "ApiKey 1234567890")
 		apiKey, err := GetAPIKey(headers)
 		if err != nil {
 			t.Errorf("expected no error, got %v", err)
